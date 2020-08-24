@@ -1,8 +1,43 @@
+#' Get the temperature of a sensor instance.
+#'
+#' Reads the temperature of a given sensor instance.
+#'
+#' @param x A sensor instance.
+#' @param ... further arguments passed to or from other methods.
+#'
+#' @examples
+#' \dontrun{
+#' # Get a DS18B20 sensor instance.
+#' sensor <- get_ds18b20_sensor()
+#' get_temperature(sensor)
+#' }
+#'
 #' @export
-get_temperature <- function (x, ...) UseMethod("get_temperature", x)
+#'
+get_temperature <- function (x, ...) UseMethod("get_temperature")
 
+#' Get the temperature of a DS18B20 sensor instance.
+#'
+#' Reads the temperature of a given sensor instance.
+#'
+#' @param x A sensor instance.
+#' @param scale One of `"celsius"`, `"fahrenheit"` or `"kelvin"`, indicating
+#'   the desired return scale.
+#' @param max_retries A numeric of length one indicating how many times it
+#'   should retry in case of issues.
+#' @param ... further arguments passed to or from other methods.
+#'
+#' @examples
+#' \dontrun{
+#' # Get a DS18B20 sensor instance.
+#' sensor <- get_ds18b20_sensor()
+#' get_temperature(sensor)
+#' get_temperature(sensor, "fahrenheit")
+#' }
+#'
 #' @export
-get_temperature.ds18b20 <- function(x, scale = "celsius", max_retries = 10) {
+#'
+get_temperature.ds18b20 <- function(x, scale = "celsius", max_retries = 10, ...) {
   retries <- 1
   device_file <- x$device_file
   # Try to read the temperature from the device file.
