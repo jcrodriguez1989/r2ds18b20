@@ -7,7 +7,7 @@ Authors@R: c(
     role = c("aut", "cre"), email = "jcrodriguez@unc.edu.ar")
   )
 Maintainer: Juan Cruz Rodriguez <jcrodriguez@unc.edu.ar>
-Description: Control your Raspberry Pi's DS18B20 sensor from R.
+Description: Control your Raspberry Pi's DS18B20 temperature sensor from R.
 License: MIT + file LICENSE
 URL: https://github.com/jcrodriguez1989/r2ds18b20
 BugReports: https://github.com/jcrodriguez1989/r2ds18b20/issues
