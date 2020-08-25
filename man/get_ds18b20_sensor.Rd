@@ -12,6 +12,10 @@ as found in the `/sys/bus/w1/devices/` directory. If `NA`, it will return
 the first sensor found. This parameter should be used only if more than one
 DS18B20 sensor is connected. Defaults to `NA`.}
 }
+\value{
+A ds18b20 S3 object, this object will be set to work with the selected
+  sensor.
+}
 \description{
 Returns a DS18B20 sensor instance ready to get its temperature.
 The sensor should be set to use with the Raspberry's 1-Wire protocol.

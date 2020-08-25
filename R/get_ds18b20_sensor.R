@@ -8,6 +8,9 @@
 #'   the first sensor found. This parameter should be used only if more than one
 #'   DS18B20 sensor is connected. Defaults to `NA`.
 #'
+#' @return A ds18b20 S3 object, this object will be set to work with the selected
+#'   sensor.
+#'
 #' @examples
 #' \dontrun{
 #' # If just one sensor connected, this would be the normal use case.

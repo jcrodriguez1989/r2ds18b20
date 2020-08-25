@@ -17,6 +17,10 @@ should retry in case of issues.}
 
 \item{...}{further arguments passed to or from other methods.}
 }
+\value{
+A numeric of length one with the read temperature in the selected
+  `scale`. In case of error, it will return `NA`.
+}
 \description{
 Reads the temperature of a given sensor instance.
 }

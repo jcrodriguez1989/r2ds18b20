@@ -5,6 +5,9 @@
 #' @param x A sensor instance.
 #' @param ... further arguments passed to or from other methods.
 #'
+#' @return A numeric of length one with the read temperature in the selected
+#'   `scale`. In case of error, it will return `NA`.
+#'
 #' @examples
 #' \dontrun{
 #' # Get a DS18B20 sensor instance.
@@ -27,6 +30,9 @@ get_temperature <- function (x, ...) UseMethod("get_temperature")
 #' @param max_retries A numeric of length one indicating how many times it
 #'   should retry in case of issues.
 #' @param ... further arguments passed to or from other methods.
+#'
+#' @return A numeric of length one with the read temperature in the selected
+#'   `scale`. In case of error, it will return `NA`.
 #'
 #' @examples
 #' \dontrun{
