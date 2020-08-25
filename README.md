@@ -27,13 +27,20 @@ remotes::install_github("jcrodriguez1989/r2ds18b20", dependencies = TRUE)
 ### Sensor Connection
 
 The `r2ds18b20` package requires that your DS18B20 sensor is correctly
-connected in your Raspberry Pi’s GPIO. The default setting for you
-DS18B20 sensor would be following this wiring diagram:
+connected in your Raspberry Pi’s GPIO.
+
+The default setting for you DS18B20 sensor would be following this
+wiring diagram:
 
 ![Image from Pi My Life
 Up](https://pi.lbbcdn.com/wp-content/uploads/2016/03/Raspberry-Pi-Temperature-Sensor-Diagram-v2.png)
 
 The resistor should be 4.7K or 10K Ohm.
+
+The data pin must be the GPIO4 (as in the diagram). If it is connected
+to another pin, then additional configuration should be addressed. More
+information could be find at [this
+post](https://raspberrypi.stackexchange.com/questions/38054/change-gpio-pin-for-ds18b20-one-wire-digital-temperature-sensor).
 
 ### Enabling the Interface
 
