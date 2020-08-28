@@ -47,7 +47,7 @@ get_temperature <- function (x, ...) UseMethod("get_temperature")
 #'
 get_temperature.Ds18b20 <- function(x, scale = "celsius", max_retries = 10, ...) {
   retries <- 1
-  device_file <- x$device_file
+  device_file <- x@device_file
   # Try to read the temperature from the device file.
   file_lines <- readLines(device_file)
   while (!grepl("YES$", file_lines[1]) && retries < max_retries) {
