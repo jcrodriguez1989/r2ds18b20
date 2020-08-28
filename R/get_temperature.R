@@ -12,8 +12,9 @@
 #' \dontrun{
 #' # Get a DS18B20 sensor instance.
 #' sensor <- get_ds18b20_sensor()
-#' # Read the temperature.
+#' # Read the temperature in Celsius and in Fahrenheit.
 #' get_temperature(sensor)
+#' get_temperature(sensor, "fahrenheit")
 #' }
 #'
 #' @export
