@@ -45,7 +45,7 @@ get_temperature <- function (x, ...) UseMethod("get_temperature")
 #'
 #' @export
 #'
-get_temperature.ds18b20 <- function(x, scale = "celsius", max_retries = 10, ...) {
+get_temperature.Ds18b20 <- function(x, scale = "celsius", max_retries = 10, ...) {
   retries <- 1
   device_file <- x$device_file
   # Try to read the temperature from the device file.

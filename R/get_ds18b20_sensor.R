@@ -8,7 +8,7 @@
 #'   the first sensor found. This parameter should be used only if more than one
 #'   DS18B20 sensor is connected. Defaults to `NA`.
 #'
-#' @return A ds18b20 S3 object, this object will be set to work with the selected
+#' @return A Ds18b20 S4 object, this object will be set to work with the selected
 #'   sensor.
 #'
 #' @examples
@@ -20,6 +20,8 @@
 #' sensor_1 <- get_ds18b20_sensor("28-0300a2790676")
 #' sensor_2 <- get_ds18b20_sensor("28-0300a0881918")
 #' }
+#'
+#' @importFrom methods new
 #'
 #' @export
 #'
@@ -38,7 +40,6 @@ get_ds18b20_sensor <- function(sensor_id = NA) {
   if (is.na(device_folder) || !file.exists(device_file))
     stop("Sensor not found, or not configured.")
   # Return the structure.
-  sensor <- list(device_file = device_file)
-  attr(sensor, "class") <- "ds18b20"
-  sensor
+  # Create our representation class of a ds18b20.
+  new("Ds18b20", device_file = device_file)
 }

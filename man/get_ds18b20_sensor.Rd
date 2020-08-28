@@ -13,7 +13,7 @@ the first sensor found. This parameter should be used only if more than one
 DS18B20 sensor is connected. Defaults to `NA`.}
 }
 \value{
-A ds18b20 S3 object, this object will be set to work with the selected
+A Ds18b20 S4 object, this object will be set to work with the selected
   sensor.
 }
 \description{
